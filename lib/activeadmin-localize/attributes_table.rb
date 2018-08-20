@@ -27,8 +27,8 @@ module ActiveAdmin
               td do
                 I18n.with_locale locale do
                   (
-                    image_tag("activeadmin-localize/#{locale.to_s}.svg", alt: locale.to_s, title: locale.to_s, width: 20, height: 15) +
-                    ' ' +
+                    #image_tag("activeadmin-localize/#{locale.to_s}.svg", alt: locale.to_s, title: locale.to_s, width: 20, height: 15) +
+                    #' ' +
                     content_for(record, block || title)
                   ).html_safe
                 end

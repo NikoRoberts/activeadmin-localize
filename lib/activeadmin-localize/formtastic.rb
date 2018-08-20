@@ -16,7 +16,7 @@ module Formtastic
           label = ''
           label += CGI.escapeHTML(self.object.class.human_attribute_name(name))
           label += " "
-          label += template.image_tag("activeadmin-localize/#{flag_code}.svg", alt: locale.to_s, title: locale.to_s, width: 20, height: 15)
+          # label += template.image_tag("activeadmin-localize/#{flag_code}.svg", alt: locale.to_s, title: locale.to_s, width: 20, height: 15)
 
           if args[:as] == :ckeditor
             prep = "<h3 style='margin: 10px 0px 0px 10px;'>#{label}</h3>#{'<abbr>*</abbr>' if field.required?}".html_safe
