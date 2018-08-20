@@ -20,7 +20,7 @@ module ActiveAdmin
         @required = validators.include?('ActiveRecord::Validations::PresenceValidator') || validators.include?('Mongoid::Validations::PresenceValidator')
 
         @errors = ActiveModel::Errors.new(self)
-        hash = @obj.send("#{name}_translations")
+        hash = @obj.send("#{name}_translations").to_hash
         hash = {} if hash.nil?
 
         ::ActiveAdmin::Localize.locales.each do |k|
